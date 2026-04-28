@@ -1,3 +1,4 @@
+import { injectSpeedInsights } from "@vercel/speed-insights";
 import { initContactForm } from "./core/contact.js";
 import { initNavigation } from "./core/nav.js";
 import { initScrollUi } from "./core/scroll.js";
@@ -8,6 +9,9 @@ import { initStackVisuals } from "./modules/stacks.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const ui = getUiState();
+
+  // Initialize Vercel Speed Insights
+  injectSpeedInsights();
 
   syncCurrentYear(ui.yearNodes);
   initStackVisuals(ui);
