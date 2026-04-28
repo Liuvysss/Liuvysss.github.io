@@ -1,3 +1,4 @@
+import { initAnalytics } from "./core/analytics.js";
 import { initContactForm } from "./core/contact.js";
 import { initNavigation } from "./core/nav.js";
 import { initScrollUi } from "./core/scroll.js";
@@ -9,6 +10,7 @@ import { initStackVisuals } from "./modules/stacks.js";
 document.addEventListener("DOMContentLoaded", () => {
   const ui = getUiState();
 
+  initAnalytics();
   syncCurrentYear(ui.yearNodes);
   initStackVisuals(ui);
   initProjectShowcase(ui);

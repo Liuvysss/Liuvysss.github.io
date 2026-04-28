@@ -6,6 +6,7 @@
     "test:e2e:contact": "node tests/contact-e2e.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "resend": "^6.0.3"
   }
 }
