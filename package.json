@@ -1,0 +1,11 @@
+{
+  "name": "liuvys-portfolio",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test:e2e:contact": "node tests/contact-e2e.mjs"
+  },
+  "dependencies": {
+    "resend": "^6.0.3"
+  }
+}

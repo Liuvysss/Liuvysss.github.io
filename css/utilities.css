@@ -1,0 +1,60 @@
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay, 0ms);
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-0 {
+  --delay: 0ms;
+}
+
+.delay-1 {
+  --delay: 100ms;
+}
+
+.delay-2 {
+  --delay: 200ms;
+}
+
+.delay-3 {
+  --delay: 300ms;
+}
+
+.delay-4 {
+  --delay: 400ms;
+}
+
+.delay-5 {
+  --delay: 500ms;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

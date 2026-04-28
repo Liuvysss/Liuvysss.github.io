@@ -1,64 +1,966 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liuvys • Frontend Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Liuvys Perez, a Frontend Developer specializing in accessible, high-performance web experiences." />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liuvys • Coming Soon</title>
-    <meta name="description" content="Something beautiful is on the horizon." />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
 
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cookie&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Homemade+Apple&family=Hurricane&family=Ms+Madi&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <!-- Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+  <body>
+    <!-- Skip link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<body>
 
-    <main class="cs-page-wrapper">
 
-        <!-- White Card Box -->
-        <div class="cs-card animate-fade-in-up">
+    <!-- ========== HEADER ========== -->
 
-            <!-- Headlines -->
-            <div class="cs-text-content">
-                <h1 class="cs-title">Coming Soon</h1>
-                <p class="cs-subtitle">Portfolio loading, expected 2026</p>
+    <header id="main-header">
+        <div class="header-container">
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="nav-list">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    
+                    <!-- Logo -->
+                    <li class="logo-item">
+                        <a href="#home" class="nav-avatar-link" aria-label="Liuvys Home">
+                            <img src="assets/images/me.jpg" alt="" class="nav-avatar-img">
+                        </a>
+                    </li>
+
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Header (Hidden on Desktop) -->
+            <div class="mobile-header-bar">
+                <!-- Mobile Logo (Left) -->
+                <a href="#home" class="nav-avatar-link" aria-label="Liuvys Home">
+                    <img src="assets/images/me.jpg" alt="" class="nav-avatar-img">
+                </a>
+
+                <!-- Hamburger Button (Right) -->
+                <button
+                    class="hamburger-btn"
+                    id="mobile-menu-toggle"
+                    aria-label="Open Menu"
+                    aria-controls="mobile-menu-sidebar"
+                    aria-expanded="false"
+                >
+                    <svg class="icon" aria-hidden="true">
+                        <use href="#icon-menu"></use>
+                    </svg>
+                </button>
             </div>
+        </div>
+    </header>
 
-            <!-- Signature -->
-            <div class="cs-signature-wrapper">
-                <span class="cs-signature">Liuvys Perez</span>
-            </div>
+    <!-- Mobile Slide-In Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
 
-            <!-- Social Icons -->
-            <div class="cs-socials">
-                <a href="https://www.linkedin.com/in/liuvys/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/Liuvysss" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://instagram.com/liuvysss" target="_blank" aria-label="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:liuvysp@gmail.com.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    <!-- Mobile Slide-In Menu -->
+    <div class="mobile-menu-sidebar" id="mobile-menu-sidebar">
+        <button
+            class="close-menu-btn"
+            id="close-menu-btn"
+            aria-label="Close Menu"
+        >
+            <svg class="icon" aria-hidden="true">
+                <use href="#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="mobile-nav-list">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+<main id="main-content">
+        
+    <!-- ========== HERO ========== -->
+
+    <section id="home" class="hero-section glass-wrapper animate-fade-in-up delay-0">
+        <div class="container">
+
+            <div class="hero-content">
+                <span class="badge">
+                    <span class="badge-dot"></span> Available for opportunities
+                </span>
+
+                <h1 class="hero-title animate-fade-in-up delay-1">
+                    Hi, I'm Liuvys<br>
+                    <span class="text-gradient">
+                        <strong>Frontend Developer</strong>
+                    </span>
+                </h1>
+
+                <p class="hero-description animate-fade-in-up delay-2">
+                    Full-stack focus, frontend heart. I build responsive and accessible React 
+                    applications where clean architecture meets human-centered design. Based in the US.
+                </p>
+
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary animate-fade-in-up delay-3">
+                        View Projects
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary animate-fade-in-up delay-3">
+                        Let's Connect
+                    </a>
+                </div>
+
+                <!-- Tech Stack Badges -->
+                <div class="tech-badges animate-on-scroll delay-3">
+                    <div class="tech-grid" data-home-stack aria-label="Technology stack"></div>
+                </div>
             </div>
 
         </div>
-
-        <!-- Footer (Outside the box) -->
-        <footer class="cs-footer">
-            <p>Copyright &copy; 2026 Liuvys Perez. All Rights Reserved.</p>
-        </footer>
-
-    </main>
-
-    <script src="script.js"></script>
-</body>
+    </section>
 
 
+
+    <!-- ========== PROJECTS ========== -->
+
+    <section id="projects" class="project-section glass-wrapper">
+        <div class="container">
+            <div class="project-header animate-on-scroll delay-0">
+                <h2 class="text-gradient">
+                    Projects
+                </h2>
+                <div
+                    class="project-scroller__controls"
+                    role="group"
+                    aria-label="Project carousel controls"
+                >
+                    <button
+                        type="button"
+                        class="project-scroller__button"
+                        data-project-list-prev
+                        aria-controls="project-list"
+                        aria-label="Scroll to previous projects"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M14.5 5.5 8 12l6.5 6.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                        type="button"
+                        class="project-scroller__button"
+                        data-project-list-next
+                        aria-controls="project-list"
+                        aria-label="Scroll to next projects"
+                    >
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M9.5 5.5 16 12l-6.5 6.5"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.8"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="project-scroller">
+                <div
+                    class="project-grid"
+                    id="project-list"
+                    data-project-list
+                    aria-label="Recent projects carousel"
+                    tabindex="0"
+                ></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ========== EXPERIENCE & SKILLS ========== -->
+
+    <section id="experience" class="experience-section glass-wrapper">
+        <div class="container">
+            <div class="experience-header animate-on-scroll delay-0">
+                <h2 class="text-gradient">
+                    Experience & Skills
+                </h2>
+            </div>
+
+            <div class="experience-layout">
+                <aside class="experience-stack animate-on-scroll delay-1" aria-labelledby="experience-stack-heading">
+                    <h3 class="timeline__group-title experience-stack__title" id="experience-stack-heading">
+                        <svg class="icon icon--sm" aria-hidden="true">
+                            <use href="#icon-stack"></use>
+                        </svg>
+                        Stack
+                    </h3>
+                    <ul class="experience-stack__list" data-experience-stack aria-label="Core technologies"></ul>
+                </aside>
+
+                <!-- Timeline Column -->
+                <div class="timeline-column">
+                    <div class="timeline animate-on-scroll delay-2">
+                        <!-- Education -->
+                        <div class="timeline__group animate-on-scroll delay-2">
+                            <h3 class="timeline__group-title">
+                                <svg class="icon icon--sm text" aria-hidden="true">
+                                <use href="#icon-edu"></use>
+                                </svg>
+                                Education
+                            </h3>
+
+                            <article class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                    <header class="timeline__header">
+                                        <time class="timeline__date">
+                                            Expected 2028
+                                        </time>
+                                        <h4 class="timeline__title">
+                                            B.A. in Graphic Design and Media Arts
+                                        </h4>
+                                        <p class="timeline__org">
+                                            Southern New Hampshire University
+                                        </p>
+                                    </header>
+                            </article>
+
+                            <article class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                    <header class="timeline__header">
+                                        <time class="timeline__date">
+                                            Completed 2026
+                                        </time>
+                                        <h4 class="timeline__title">
+                                            A.A.S. in Web Development & Design
+                                        </h4>
+                                        <p class="timeline__org">
+                                            Harrisburg Area Community College
+                                        </p>
+                                    </header>
+                            </article>
+                        </div>
+
+                            <!-- Professional Experience -->
+                            <div class="timeline__group animate-on-scroll delay-3">
+                            <h3 class="timeline__group-title">
+                                <svg class="icon icon--sm" aria-hidden="true">
+                                <use href="#icon-briefcase"></use>
+                                </svg>
+                                Professional
+                            </h3>
+
+                            <article class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                <header class="timeline__header">
+                                <time class="timeline__date">2018 — 2023</time>
+                                <h4 class="timeline__title">Office & Field Manager</h4>
+                                <p class="timeline__org">Tahino Professional Services LLC • Miami, FL</p>
+                                </header>
+                                <ul class="timeline__bullets">
+                                <li>
+                                    Managed day-to-day business operations, coordinating scheduling,
+                                    client communication, and job tracking across multiple projects.
+                                </li>
+                                <li>
+                                    Streamlined workflows and administrative processes, improving
+                                    efficiency and reducing scheduling conflicts in a fast-paced environment.
+                                </li>
+                                <li>
+                                    Acted as the primary point of contact for clients, translating
+                                    service needs into clear project requirements and deliverables.
+                                </li>
+                                <li>
+                                    Maintained accurate records, estimates, and invoices, ensuring
+                                    consistency, organization, and accountability across operations.
+                                </li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="/assets/docs/Liuvys_Perez_Resume_2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary animate-fade-in-up delay-5">
+                    Download Resume
+                    <svg class="icon icon--sm" aria-hidden="true">
+                        <use href="#icon-download"></use>
+                    </svg>
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <svg style="display: none">
+        <symbol id="icon-briefcase" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+        </symbol>
+
+        <symbol id="icon-edu" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.85 12.58l7.15 3.9 7.15-3.9v2.53l-7.15 3.9-7.15-3.9v-2.53z"/>
+        </symbol>
+
+        <symbol id="icon-stack" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2 2 7l10 5 10-5-10-5Zm6.93 6.46L12 11.93 5.07 8.46 3.4 9.3 12 13.6l8.6-4.3-1.67-.84Zm0 4L12 15.93l-6.93-3.47-1.67.84L12 17.6l8.6-4.3-1.67-.84Z"/>
+        </symbol>
+
+        <symbol id="icon-menu" viewBox="0 0 24 24">
+            <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+        </symbol>
+
+        <symbol id="icon-close" viewBox="0 0 24 24">
+            <path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"/>
+        </symbol>
+
+        <symbol id="icon-download" viewBox="0 0 24 24">
+            <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+        </symbol>
+
+        <symbol id="icon-check-circle" viewBox="0 0 24 24">
+            <path d="M20 11.5v.5a8 8 0 1 1-4.75-7.31" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+            <path d="m9 11.75 2.2 2.2L20 5.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+        </symbol>
+
+        <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+            <path d="M12 19V5m0 0-6 6m6-6 6 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"/>
+        </symbol>
+
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6.94 8.9H3.82v10.2h3.12V8.9ZM5.38 4.1a1.82 1.82 0 1 0 0 3.64 1.82 1.82 0 0 0 0-3.64Zm5.3 4.8H7.7v10.2h3.08v-5.35c0-1.43.67-2.28 1.8-2.28 1.04 0 1.54.74 1.54 2.28v5.35h3.08v-6.12c0-2.83-1.51-4.31-3.62-4.31-1.47 0-2.35.8-2.77 1.36h-.04V8.9Z"/>
+        </symbol>
+
+        <symbol id="icon-codepen" viewBox="0 0 24 24">
+            <path d="m12 2.75 8.5 5.67v7.16L12 21.25l-8.5-5.67V8.42L12 2.75Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"/>
+            <path d="m12 2.75v6.9m0 4.7v6.9M3.5 8.42l8.5 5.93 8.5-5.93M3.5 15.58l8.5-5.93 8.5 5.93" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"/>
+        </symbol>
+
+        <symbol id="icon-github-brand" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12 2.8a9.2 9.2 0 0 0-2.9 17.93c.46.08.63-.2.63-.44v-1.6c-2.57.56-3.11-1.1-3.11-1.1-.42-1.07-1.03-1.36-1.03-1.36-.84-.57.06-.56.06-.56.93.06 1.42.96 1.42.96.83 1.42 2.18 1.01 2.7.77.09-.6.33-1.01.59-1.24-2.05-.23-4.2-1.03-4.2-4.56 0-1 .36-1.83.95-2.48-.1-.23-.41-1.17.09-2.45 0 0 .78-.25 2.54.95A8.84 8.84 0 0 1 12 7.31c.77 0 1.54.1 2.26.31 1.76-1.2 2.53-.95 2.53-.95.51 1.28.19 2.22.1 2.45.59.65.95 1.48.95 2.48 0 3.54-2.16 4.32-4.21 4.55.34.29.63.86.63 1.74v2.4c0 .25.17.53.64.44A9.2 9.2 0 0 0 12 2.8Z"/>
+        </symbol>
+    </svg>
+
+
+
+    <!-- ========== ABOUT SECTION ========== -->
+    
+    <section id="about" class="about-section glass-wrapper animate-on-scroll delay-0">
+        <div class="container">
+            <div class="about-grid">
+            
+            <!-- Left Column: Visual/Identity -->
+            <div class="about-visual animate-on-scroll delay-1">
+                <div class="image-frame">
+                    <img src="assets/images/me.jpg" alt="Photo of Liuvys" class="profile-img">
+                </div>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="about-content animate-on-scroll delay-2">
+                <header class="about-header">
+                    <h2 class="text-gradient">
+                        About Me
+                    </h2>
+                </header>
+
+                <div class="about-bio">
+                    <p>
+                        My obsession with code began at 14, driven by that sort of dangerous "what happens when I type <em>this</em>?" curiosity. 
+                        (Geocities survivors, you know what I'm talking about.)
+                    </p>
+                    <p>
+                        Life took a few detours between then and now. I raised small humans&mdash;incredible for your debugging patience, 
+                        catastrophic for your sleep schedule. Then I moved across the country and went back to school. Yes, in that order.
+                        Not a straightforward story, but that's kind of the point.
+                    </p>
+                    <p>
+                        I kept coming back to code through all of it&mdash;not in a "it's my passion" LinkedIn way, but in a "I pulled an 
+                        all-nighter to fix my friend's website and I don't regret it" way. Make of that what you will.
+                    </p>
+                    <p>  
+                        These days, I'm focused on <strong>semantic HTML, modern React,</strong> and <strong>accessible design</strong>. I build 
+                        products that work for everyone, and I want to do it with a team that values growth and learning as much as I do.
+                    </p>
+                    <p>
+                        After all, I'm still that curious kid at heart&mdash;just better at fixing what breaks now.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- ========== CONTACT SECTION ========== -->
+
+    <section id="contact" class="contact-section glass-wrapper animate-on-scroll delay-0">
+        <div class="container">
+            <div class="contact-grid">
+            
+                <!-- Left Side: Content Area -->
+                <div class="contact-info animate-on-scroll delay-1">
+                    <h2 class="text-gradient">
+                        Let's Connect
+                    </h2>
+                    <p>
+                        Have a project in mind? I'm currently 
+                        <strong>available for new opportunities</strong> and would love to hear from you.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <span class="method-label">Location</span>
+                            <span class="method-value">York, PA, USA (Remote/Hybrid)</span>
+                        </div>
+
+                        <div class="method-item">
+                            <span class="method-label">Email</span>
+                            <a href="mailto:liuvysp@gmail.com" class="method-link">liuvysp@gmail.com</a>
+                        </div>
+
+                        <div class="socials">
+                            <a href="https://www.linkedin.com/in/liuvys/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"
+                            ><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg
+                            ></a>
+                            <a href="https://codepen.io/Liuvys" target="_blank" rel="noopener noreferrer" aria-label="CodePen profile"
+                            ><svg class="icon" aria-hidden="true"><use href="#icon-codepen"></use></svg
+                            ></a>
+                            <a href="https://github.com/Liuvysss" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"
+                            ><svg class="icon" aria-hidden="true"><use href="#icon-github-brand"></use></svg
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <div class="form-container animate-on-scroll delay-2">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="fullName" class="sr-only">Full Name</label>
+                            <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Full Name"
+                            required
+                            aria-required="true"
+                            />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Email Address"
+                            required
+                            aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="sr-only">Subject</label>
+                            <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Subject"
+                            required
+                            aria-required="true"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="How can I help you?"
+                            required
+                            aria-required="true"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group" hidden>
+                            <label for="website">Website</label>
+                            <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            tabindex="-1"
+                            autocomplete="off"
+                            />
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="formSuccess" class="form-status-message hidden" role="alert" aria-live="polite">
+                        <div class="status-icon">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="#icon-check-circle"></use>
+                            </svg>
+                        </div>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+</main>
+
+
+
+    <!-- ========== PROJECT DETAILS DRAWER ========== -->
+
+    <div class="project-drawer-overlay" data-project-overlay hidden></div>
+    <aside
+        class="project-drawer"
+        data-project-drawer
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-drawer-title"
+        aria-describedby="project-drawer-summary"
+        hidden
+    >
+        <div class="project-drawer__panel">
+            <div class="project-drawer__topbar">
+                <nav class="project-drawer__nav project-drawer__nav--top" aria-label="Browse projects">
+                    <button
+                        type="button"
+                        class="project-drawer__nav-button"
+                        data-project-nav="prev"
+                    >
+                        <span class="project-drawer__nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M14.5 5.5 8 12l6.5 6.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+                        </span>
+                        <span class="project-drawer__nav-text">Previous</span>
+                    </button>
+
+                    <p class="project-drawer__nav-status" data-project-nav-status aria-live="polite"></p>
+
+                    <button
+                        type="button"
+                        class="project-drawer__nav-button"
+                        data-project-nav="next"
+                    >
+                        <span class="project-drawer__nav-text">Next</span>
+                        <span class="project-drawer__nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M9.5 5.5 16 12l-6.5 6.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </nav>
+
+                <button
+                    type="button"
+                    class="project-drawer__close"
+                    data-project-close
+                    aria-label="Close project details"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M6.4 6.4 17.6 17.6M17.6 6.4 6.4 17.6"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.8"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="project-drawer__content">
+                <p class="project-drawer__eyebrow" data-project-drawer-year></p>
+                <h3
+                    class="project-drawer__title"
+                    id="project-drawer-title"
+                    data-project-drawer-title
+                ></h3>
+                <p
+                    class="project-drawer__summary"
+                    id="project-drawer-summary"
+                    data-project-drawer-summary
+                ></p>
+
+                <section class="project-drawer__media" aria-labelledby="project-drawer-media-heading">
+                    <h4 class="sr-only" id="project-drawer-media-heading">Project gallery</h4>
+                    <div
+                        class="project-carousel"
+                        data-project-carousel
+                        aria-label="Project gallery"
+                        aria-roledescription="carousel"
+                    >
+                        <div class="project-carousel__viewport">
+                            <div class="project-carousel__slides" data-project-carousel-slides></div>
+                            <div class="project-carousel__controls">
+                                <button
+                                    type="button"
+                                    class="project-carousel__button"
+                                    data-project-carousel-prev
+                                    aria-label="Previous project image"
+                                    hidden
+                                >
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M14.5 5.5 8 12l6.5 6.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                        />
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="project-carousel__button"
+                                    data-project-carousel-next
+                                    aria-label="Next project image"
+                                    hidden
+                                >
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path
+                                            d="M9.5 5.5 16 12l-6.5 6.5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                        />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="project-carousel__indicators"
+                            data-project-carousel-indicators
+                            aria-label="Project image navigation"
+                            hidden
+                        ></div>
+                        <p class="sr-only" data-project-carousel-status aria-live="polite"></p>
+                    </div>
+                </section>
+
+                <section class="project-drawer__section" aria-labelledby="project-drawer-overview-heading">
+                    <h4 class="project-drawer__section-title" id="project-drawer-overview-heading">
+                        Project Overview
+                    </h4>
+                    <section class="project-drawer__section" aria-label="Project role and technologies">
+                        <div class="project-drawer__meta-grid">
+                            <div class="project-drawer__meta-card">
+                                <h5 class="project-drawer__meta-title">
+                                    <span class="project-drawer__meta-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 12.75a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="1.7"
+                                            />
+                                            <path
+                                                d="M6.5 18.25a5.5 5.5 0 0 1 11 0"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="1.7"
+                                            />
+                                        </svg>
+                                    </span>
+                                    Role
+                                </h5>
+                                <p class="project-drawer__role" data-project-drawer-role></p>
+                            </div>
+
+                            <div class="project-drawer__meta-card project-drawer__meta-card--tech">
+                                <h5 class="project-drawer__meta-title">Technologies Used</h5>
+                                <ul class="project-drawer__tech-list" data-project-drawer-tech></ul>
+                            </div>
+                        </div>
+                    </section>
+                    <dl class="project-drawer__detail-stack">
+                        <div class="project-drawer__detail">
+                            <dt class="project-drawer__detail-label">
+                                <span class="project-drawer__detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 4.75 14.24 9.29l5 .73-3.62 3.53.85 4.98L12 16.17l-4.47 2.36.85-4.98-3.62-3.53 5-.73L12 4.75Z"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.6"
+                                        />
+                                    </svg>
+                                </span>
+                                Goal
+                            </dt>
+                            <dd class="project-drawer__detail-value" data-project-drawer-goal></dd>
+                        </div>
+
+                        <div class="project-drawer__detail">
+                            <dt class="project-drawer__detail-label">
+                                <span class="project-drawer__detail-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M6 16.5 10 12l3 3 5-6"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                        />
+                                        <path
+                                            d="M17 9h2v2"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.8"
+                                        />
+                                    </svg>
+                                </span>
+                                Results
+                            </dt>
+                            <dd class="project-drawer__detail-value" data-project-drawer-results></dd>
+                        </div>
+                    </dl>
+                </section>
+
+                <section
+                    class="project-drawer__section project-drawer__section--links"
+                    aria-labelledby="project-drawer-links-heading"
+                >
+                    <h4 class="project-drawer__section-title" id="project-drawer-links-heading">
+                        External Links
+                    </h4>
+                    <div class="project-drawer__links" data-project-drawer-links></div>
+                </section>
+
+                <nav class="project-drawer__nav project-drawer__nav--bottom" aria-label="Browse projects">
+                    <button
+                        type="button"
+                        class="project-drawer__nav-button"
+                        data-project-nav="prev"
+                    >
+                        <span class="project-drawer__nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M14.5 5.5 8 12l6.5 6.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+                        </span>
+                        <span class="project-drawer__nav-text">Previous</span>
+                    </button>
+
+                    <p class="project-drawer__nav-status" data-project-nav-status></p>
+
+                    <button
+                        type="button"
+                        class="project-drawer__nav-button"
+                        data-project-nav="next"
+                    >
+                        <span class="project-drawer__nav-text">Next</span>
+                        <span class="project-drawer__nav-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M9.5 5.5 16 12l-6.5 6.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="1.8"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </aside>
+
+    <div class="project-image-viewer-overlay" data-project-image-overlay hidden></div>
+    <aside
+        class="project-image-viewer"
+        data-project-image-viewer
+        role="dialog"
+        aria-modal="true"
+        aria-label="Expanded project image"
+        hidden
+    >
+        <div class="project-image-viewer__panel" data-project-image-panel>
+            <button
+                type="button"
+                class="project-image-viewer__close"
+                data-project-image-close
+                aria-label="Close expanded project image"
+            >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M6.4 6.4 17.6 17.6M17.6 6.4 6.4 17.6"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.8"
+                    />
+                </svg>
+            </button>
+
+            <div
+                class="project-image-viewer__controls"
+                role="group"
+                aria-label="Expanded image controls"
+            >
+                <button
+                    type="button"
+                    class="project-carousel__button project-image-viewer__nav-button"
+                    data-project-image-nav="prev"
+                    aria-label="Show previous image"
+                    hidden
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M14.5 5.5 8 12l6.5 6.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.8"
+                        />
+                    </svg>
+                </button>
+                <button
+                    type="button"
+                    class="project-carousel__button project-image-viewer__nav-button"
+                    data-project-image-nav="next"
+                    aria-label="Show next image"
+                    hidden
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M9.5 5.5 16 12l-6.5 6.5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.8"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <button
+                type="button"
+                class="project-image-viewer__image-button"
+                data-project-image-advance
+                aria-label="Show next image"
+            >
+                <img
+                    class="project-image-viewer__image"
+                    data-project-image-full
+                    alt=""
+                />
+            </button>
+            <p class="sr-only" data-project-image-status aria-live="polite"></p>
+        </div>
+    </aside>
+
+
+
+    <!-- ========== FOOTER ========== -->
+
+    <footer class="footer-section">
+        <div class="footer-content">
+            <p class="footer-text">
+                © Copyright <span data-current-year>2026</span> Liuvys Perez<br>
+                All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="back-to-top" aria-label="Back to Top">
+        <svg
+            class="progress-circle svg-content"
+            width="100%"
+            height="100%"
+            viewBox="-1 -1 102 102"
+        >
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <svg class="icon" aria-hidden="true">
+            <use href="#icon-arrow-up"></use>
+        </svg>
+    </a>
+
+    <script type="module" src="js/main.js"></script>
+
+  </body>
 </html>
